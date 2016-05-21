@@ -26,15 +26,15 @@
 }
 
 -(NSUInteger)countOfUppercaseStringsInArray:(NSArray *)array {
-    NSUInteger countUppercase = 0;
+    NSUInteger index = 0;
     
-    for (NSUInteger i = 0; i < [array count]; i++) {
-        NSString *upperString = [array[i] uppercaseString];
-        if ([array[i] isEqualToString:upperString]) {
-            countUppercase = countUppercase + 1;
+    for (NSString *string in array) {
+        NSString *upperString = [string uppercaseString];
+        if ([string isEqualToString:upperString]) {
+            index = index + 1;
         }
     }
-    return countUppercase;
+    return index;
 }
 
 -(void)removeAllObjectsFromArray:(NSMutableArray *)array {
